@@ -1,0 +1,57 @@
+%p#notice= notice
+%h1 Posts
+%table
+  %thead
+    %tr
+      %th Title
+      %th Content
+      %th{:colspan => "3"}
+  %tbody
+    - @posts.each do |post|
+      %tr
+        %td= post.title
+        %td= post.content
+        %td= link_to 'Show', post
+        %td= link_to 'Edit', edit_post_path(post)
+        %td= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+
+.columns
+  .column{ style: "background-color: #42afe3" }
+    左サイド左サイド左サイド左サイド左サイド
+  .column{ style: "background-color: #f68b39" }
+    まんなかまんなかまんなかまんなかまんなか
+  .column{ style: "background-color: #fce473" }
+    右サイド右サイド右サイド右サイド右サイド
+
+.columns
+  .column.is-two-thirds
+    .class{ style: "background-color: #f68b39" }
+      ウィンドウ幅2/3サイズの要素
+  .column.is-one-thirds
+    .class{ style: "background-color: #fce473" }
+      ウィンドウ幅1/3サイズの要素
+.columns
+  .column.is-one-quarter
+    .class{ style: "background-color: #42afe3" }
+      ウィンドウ幅1/4サイズの要素
+  .column.is-half
+    .class{ style: "background-color: #f68b39" }
+      ウィンドウ幅1/2サイズの要素
+
+.columns
+  .column.is-4
+    .class{ style: "background-color: #f68b39" }
+      ウィンドウ幅4/12サイズの要素
+  .column.is-8
+    .class{ style: "background-color: #fce473" }
+      ウィンドウ幅8/12サイズの要素
+.columns
+  .column.is-2
+    .class{ style: "background-color: #42afe3" }
+      ウィンドウ幅2/12サイズの要素
+  .column.is-2
+    .class{ style: "background-color: #f68b39" }
+      ウィンドウ幅2/12サイズの要素
+      
+= link_to 'New Post', new_post_path
