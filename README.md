@@ -30,4 +30,4 @@ views/layouts/application.html.hamlに以下を追記
 
 以上  
 
-※レイアウトは各viewにて所定のclassとstyleを指定することで設定可能  
+※レイアウトの変更は、各viewにて所定のclassとstyleを指定することで可能  
